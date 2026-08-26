@@ -16,6 +16,8 @@
 - 学习路线：[docs/roadmap.md](docs/roadmap.md)
 - 前十二课：[docs/curriculum.md](docs/curriculum.md)
 - 全阶段课程地图：[docs/curriculum-map.md](docs/curriculum-map.md)
+- 外部参考仓库：[docs/reference-repositories.md](docs/reference-repositories.md)
+- 提交与接续规则：[docs/commit-workflow.md](docs/commit-workflow.md)
 - 教学质量契约：[docs/curriculum-governance.md](docs/curriculum-governance.md)
 - 当前进度：[docs/progress.md](docs/progress.md)
 - 能力验收：[docs/assessment.md](docs/assessment.md)
