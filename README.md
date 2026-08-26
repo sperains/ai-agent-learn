@@ -14,14 +14,31 @@
 ## 从哪里开始
 
 - 学习路线：[docs/roadmap.md](docs/roadmap.md)
+- 前十二课：[docs/curriculum.md](docs/curriculum.md)
+- 全阶段课程地图：[docs/curriculum-map.md](docs/curriculum-map.md)
+- 教学质量契约：[docs/curriculum-governance.md](docs/curriculum-governance.md)
 - 当前进度：[docs/progress.md](docs/progress.md)
+- 能力验收：[docs/assessment.md](docs/assessment.md)
+- 复习节奏：[docs/review-cadence.md](docs/review-cadence.md)
+- 贯穿式项目：[docs/capstone.md](docs/capstone.md)
 - 每次学习模板：[docs/lesson-template.md](docs/lesson-template.md)
 - 实验规范：[docs/experiment-guidelines.md](docs/experiment-guidelines.md)
-- 学习日志：[learning-log/](learning-log/)
+- 学习日志索引：[learning-log/README.md](learning-log/README.md)
 - 实验目录：[experiments/](experiments/)
+
+第一次进入仓库时，依次阅读“当前进度 → 当前课次 → 最近一篇学习日志”；日常学习不需要从头重读全部路线。
 
 ## 每次学习的固定闭环
 
 ```text
 目标 → 原理 → 最小实验 → 故障实验 → 测试 → 复盘 → 更新进度 → 下一步
 ```
+
+## 本地环境
+
+```bash
+uv sync
+uv run pytest
+```
+
+复制 `.env.example` 为 `.env` 后再填写本地密钥；`.env` 不进入 Git。
