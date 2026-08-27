@@ -8,7 +8,7 @@ class Message:
 
 
 class Model(Protocol):
-    def generate(self, messages: list[Message]) -> str:
+    def generate(self, messages: list[Message]) -> str: # type: ignore
         """根据消息生成一段文本响应"""
 
 class FixedResponseModel:

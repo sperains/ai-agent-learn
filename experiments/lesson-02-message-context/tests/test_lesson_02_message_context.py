@@ -1,15 +1,21 @@
 """第 2 课的可执行契约：角色、历史与本轮上下文。"""
 
 from pathlib import Path
+import importlib.util
 import sys
 
 import pytest
 
 
 EXPERIMENT_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(EXPERIMENT_ROOT / "src"))
+MODULE_NAME = "lesson_02_message_context_main"
+MODULE_PATH = EXPERIMENT_ROOT / "src" / "main.py"
+module_spec = importlib.util.spec_from_file_location(MODULE_NAME, MODULE_PATH)
+assert module_spec is not None and module_spec.loader is not None
+main = importlib.util.module_from_spec(module_spec)
+sys.modules[MODULE_NAME] = main
+module_spec.loader.exec_module(main)
 
-import main  # noqa: E402
 
 
 def test_request_contains_system_history_and_current_user_message_in_order() -> None:
