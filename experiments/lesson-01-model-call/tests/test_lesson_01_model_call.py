@@ -53,3 +53,18 @@ def test_application_uses_model_contract_not_fixed_model_details() -> None:
 
     assert result == "来自替代模型的响应"
     assert model.received_messages == messages
+
+
+def test_application_accepts_a_new_model_implementation_with_the_same_contract() -> None:
+    """一周回归：新实现只要遵守契约，就无需修改应用函数。"""
+
+    class UppercaseModel:
+        def generate(self, messages: list[main.Message]) -> str:
+            return messages[-1].content.upper()
+
+    result = main.generate_response(
+        UppercaseModel(),
+        [main.Message(role="user", content="hello")],
+    )
+
+    assert result == "HELLO"
